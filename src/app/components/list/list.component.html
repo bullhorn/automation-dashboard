@@ -1,0 +1,28 @@
+<section>
+    <novo-loading *ngIf="isLoading"></novo-loading>
+    <novo-list direction="vertical" *ngIf="!isLoading">
+        <novo-list-item *ngFor="let test of tests">
+            <item-header>
+                <item-avatar tooltip="{{test.result}}" tooltipPosition="top" tooltipBounce="true" [icon]="getIconForResult(test)" [class]="getIconForResult(test)"></item-avatar>
+                <item-title>{{test.name}}</item-title>
+            </item-header>
+            <item-end>
+                <button *ngIf="test.result === 'Failed'" tooltip="Mark as Bug" tooltipBounce="true" theme="icon" icon="caution" (click)="markAsBug(test)"></button>
+                <button *ngIf="test.result === 'Bug'" tooltip="Mark as Failed" tooltipBounce="true" theme="icon" icon="caution" (click)="markAsFailed(test)"></button>
+                <button theme="icon" icon="delete-o" tooltip="Hard Delete Test" tooltipBounce="true" (click)="delete(test)"></button>
+            </item-end>
+            <item-content direction="vertical">
+                <p *ngIf="test.suite">
+                    <strong>Suite:</strong> {{test.suite}}
+                </p>
+                <p *ngIf="test.team">
+                    <strong>Team:</strong> {{test.team}}
+                </p>
+                <span *ngIf="test.date">
+                    <i class="bhi-clock"></i>
+                    {{test.date | date: 'medium'}}
+                </span>
+            </item-content>
+        </novo-list-item>
+    </novo-list>
+</section>

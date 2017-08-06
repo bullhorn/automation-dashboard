@@ -1,0 +1,3 @@
+<app-summary-sidebar class="sidebar" (filter)="onSidebarFilter($event)"></app-summary-sidebar>
+<app-summary-table [filter]="tableFilter" class="summary-table"></app-summary-table>
+<button (click)="slackReport(tableFilter.teamFilter)">Send Slack Report</button>

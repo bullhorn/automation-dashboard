@@ -1,0 +1,17 @@
+<novo-modal>
+    <header title="Team Config" theme="navigation" icon="tools"></header>
+    <section id="form-section">
+        <novo-form *ngIf="dropdownForm" layout="horizontal" [form]="dropdownForm">
+            <div class="novo-form-row">
+                <novo-control [form]="dropdownForm" [control]="dropdownControl"></novo-control>
+            </div>
+        </novo-form>
+        <novo-form *ngIf="form" layout="horizontal" [form]="form">
+            <div class="novo-form-row" *ngFor="let row of controls">
+                <novo-control [control]="row" [form]="form"></novo-control>
+            </div>
+        </novo-form>
+    </section>
+    <button theme="standard" (click)="close()">Cancel</button>
+    <button theme="primary" color="action" (click)="save()" icon="check">Save</button>
+</novo-modal>

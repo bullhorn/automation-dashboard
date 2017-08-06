@@ -1,0 +1,11 @@
+app-main-page {
+    display: flex;
+    .sidebar {
+        width: 275px;
+    }
+
+    .list {
+        width: calc(100% - 300px);
+        padding: 1em 1em 1em 3em;
+    }
+}

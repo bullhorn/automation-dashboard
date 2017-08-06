@@ -1,0 +1,15 @@
+<div *ngIf="!hidden">
+  <table *ngIf="formData.length" class="results-table">
+      <tr *ngFor="let result of formData">
+        <th class="table-header">{{ result.label }}</th>
+        <th class="percentage">{{ result.count }}</th>
+      </tr>
+    </table>
+    <table class="results-table">
+      <tr>
+        <th class="table-header">Total Tests</th>
+        <th class="percentage">{{total}}</th>
+      </tr>
+    </table>
+  <novo-loading *ngIf="formData.length===0"></novo-loading>
+</div>

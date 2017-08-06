@@ -1,0 +1,51 @@
+#sidebar {
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 300px;
+    background-color: #1B2127;
+    padding: 0 2em 2em 0;
+    cursor: default;
+    novo-select div[type="button"] {
+        color: white;
+        border-bottom: 1px solid #f4f4f4;
+    }
+    #testFilter, #suiteFilter {
+        color: #f4f4f4;
+    }
+    button {
+        margin: .75em 0 .5em 5%;
+    }
+    a {
+        font-weight: 400;
+    }
+    input {
+        &::-webkit-input-placeholder {
+            color: #A9ADBB !important;
+        }
+    }
+    #title-section {
+        text-align: center;
+        color: white;
+        padding: 1em 1em 1.25em 0;
+        width: 300px;
+        margin-bottom: 1.25em;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.75px;
+        font-size: 1.6em;
+        line-height: 175%;
+        background-color: rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        i {
+            font-size: 1.2em;
+            color: #FF6600;
+        }
+        span {
+            font-size: 22px;
+            color: white;
+            margin-left: 20px;
+        }
+    }
+}

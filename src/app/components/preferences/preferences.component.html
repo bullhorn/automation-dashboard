@@ -1,0 +1,15 @@
+<novo-modal>
+    <header title="Default View" theme="navigation" icon="compass"></header>
+    <section id="form-section">
+      <novo-form *ngIf="form" [form]="form">
+        <div class="novo-form-row">
+            <novo-control [form]="form" [control]="teamControl"></novo-control>
+        </div>
+        <div class="novo-form-row">
+            <novo-control [form]="form" [control]="resultControl"></novo-control>
+        </div>
+      </novo-form>
+    </section>
+    <button theme="standard" (click)="close()">Cancel</button>
+    <button theme="primary" color="action" (click)="save()" icon="check">Save</button>
+</novo-modal>

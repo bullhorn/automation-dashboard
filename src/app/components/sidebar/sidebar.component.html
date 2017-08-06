@@ -1,0 +1,18 @@
+<section id="sidebar">
+    <div id="title-section">
+        <h4><span>Automation</span> <i class="bhi-dashboard-o"></i>Dashboard</h4>
+    </div>
+    <novo-form *ngIf="sidebarForm" layout="vertical" [form]="sidebarForm">
+        <div class="novo-form-row" *ngFor="let row of controls">
+            <novo-control [control]="row" [form]="sidebarForm"></novo-control>
+        </div>
+    </novo-form>
+    <button theme="dialogue" icon="convert" inverse (click)="handleSidebarTotals()">{{toggleTitle}}</button>
+    <div *ngIf="!showTotals">
+        <a href="/summary"><button theme="dialogue" icon="chart-bar" inverse>Test Summary</button></a>
+        <button theme="dialogue" icon="tools" inverse (click)="openTeams()">Team Config</button>
+        <button theme="dialogue" icon="compass" inverse (click)="openPreferences()">Default View</button>
+        <button theme="dialogue" icon="republish" inverse (click)="refreshList()">Refresh List</button>
+    </div>
+    <app-totals *ngIf="showTotals" [data]="sidebarTotals"></app-totals>
+</section>

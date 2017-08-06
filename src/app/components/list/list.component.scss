@@ -1,0 +1,57 @@
+section {
+    novo-list {
+        novo-list-item {
+            item-content {
+                p:first-child {
+                    padding-top: .75em;
+                }
+            }
+            item-header {
+                item-avatar {
+                    border-radius: 100%;
+                    color: #fff;
+                }
+                // Pass
+                .check {
+                    background-color: #8CC152;
+                }
+                // Fail
+                .times {
+                    background-color: #DA4453;
+                }
+                // Skipped
+                .republish {
+                    background-color: #967ADC;
+                }
+                // Bug
+                .overview {
+                    background-color: #F6B042;
+                }
+                // Pending
+                .flag {
+                    background-color: #f1c40f;
+                }
+                // Default
+                .question-o {
+                    background-color: #3399DD;
+                }
+            }
+            item-end {
+                button {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+    novo-loading {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 300px;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

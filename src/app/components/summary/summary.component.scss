@@ -1,0 +1,10 @@
+app-summary {
+    display: flex;
+    .sidebar {
+        width: 275px;
+    }
+
+    .summary-table {
+        width: calc(100% - 275px);
+    }
+}

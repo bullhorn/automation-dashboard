@@ -1,0 +1,11 @@
+<section class="summary-sidebar">
+    <div id="title-section">
+        <h4>Novo <i class="bhi-dashboard-o"></i>Automation</h4>
+    </div>
+    <novo-form layout="vertical" [form]="summarySidebarForm">
+        <div class="novo-form-row" *ngFor="let row of controls">
+            <novo-control [control]="row" [form]="summarySidebarForm"></novo-control>
+        </div>
+    </novo-form>
+    <a href="/"><button theme="dialogue" icon="home" inverse>List View</button></a>
+</section>

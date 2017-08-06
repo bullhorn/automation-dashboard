@@ -1,0 +1,58 @@
+{
+    "backendURL": "",
+    "teams": [
+        {
+            "name": "Team 1",
+            "sortOrder": 1,
+            "id": 1
+        },
+        {
+            "name": "Team 2",
+            "sortOrder": 2,
+            "id": 2
+        },
+        {
+            "name": "Team 3",
+            "sortOrder": 3,
+            "id": 3
+        }
+    ],
+    "results": [
+        {
+            "value": "passed",
+            "label": "Passed",
+            "sortOrder": 1
+        },
+        {
+            "value": "failed",
+            "label": "Failed",
+            "sortOrder": 2
+        },
+        {
+            "value": "pending",
+            "label": "Pending",
+            "sortOrder": 3
+        },
+        {
+            "value": "bug",
+            "label": "Bug",
+            "sortOrder": 4
+        }
+    ],
+    "projects": [
+        {
+            "value": "testProject",
+            "label": "Test Project",
+            "sortOrder": 1
+        }
+    ],
+    "tests": [
+        {
+            "name": "This is a test",
+            "result": "passed",
+            "date": 1234567890,
+            "team": "Team 1",
+            "project": "testProject"
+        }
+    ]
+}

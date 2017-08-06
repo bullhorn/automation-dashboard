@@ -1,0 +1,16 @@
+app-summary-table {
+    display: flex;
+    .summary-table-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+            margin-left: 10px;
+        }
+    }
+}
+
+novo-table {
+    margin: 3em auto 0 auto;
+    width: 95%;
+}
