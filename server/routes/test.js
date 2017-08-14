@@ -60,7 +60,6 @@ router.post('/massUpsert', (req, res, next) => {
     res.json({message: 'Upserted'});
 });
 
-
 router.get('/query', (req, res, next) => {
     let query = {};
     let limit = 5000;
@@ -178,7 +177,7 @@ router.put('/updateTeamTests', (req, res, next) => {
                 let query = {
                     suite: suite
                 }
-                return Test.getByQueryPromise(query);
+                return Test.getByQueryPromise(query, '-pastResults');
             });
             Promise.all(promises).then(value => {
                 value = [].concat.apply([], value);
@@ -186,7 +185,7 @@ router.put('/updateTeamTests', (req, res, next) => {
                     let body = {
                         team: teamData.name
                     }
-                    Test.upsertByQuery({name:test.name},body,(error,test) => {
+                    Test.updateById(test._id,body,(error,test) => {
                         if(error) {
                             res.json({success:false, msg: 'Failed to create Tests', error:error});
                         }
