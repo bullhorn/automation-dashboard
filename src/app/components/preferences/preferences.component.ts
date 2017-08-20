@@ -20,7 +20,7 @@ export class PreferencesComponent implements OnInit {
   projectControl: any;
   data: any = {};
 
-  constructor(private modalRef: NovoModalRef, private formUtils: FormUtils, private teamService: TeamService,
+  constructor(public modalRef: NovoModalRef, private formUtils: FormUtils, private teamService: TeamService,
               private projectService: ProjectService, private resultService: ResultService) { }
 
   ngOnInit() {
