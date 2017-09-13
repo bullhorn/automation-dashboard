@@ -86,6 +86,9 @@ router.get('/query', (req, res, next) => {
         if(query.name) {
             query.name = {$regex: query.name, $options: "i"}
         }
+        if(query.suite) {
+            query.suite = {$regex: query.suite, $options: "i"}
+        }
     }
     Test.getByQuery(query,limit,sort,fields, (error, tests) => {
         if(error) {
