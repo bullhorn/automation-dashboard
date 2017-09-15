@@ -2,6 +2,10 @@
   "name": "automation-dashboard",
   "version": "0.0.0",
   "license": "MIT",
+  "author": {
+    "name": "Nathan Wilson",
+    "email": "nathan.wilson@bullhorn.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,6 +14,18 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "description": "Tool used for tracking Protractor and TestNG based automation results", 
+  "keywords": [
+    "automation",
+    "dashboard",
+    "protractor",
+    "testng",
+    "selenium",
+    "bullhorn",
+    "testing",
+    "jenkins",
+    "ci"
+  ],
   "private": true,
   "dependencies": {
     "@angular/common": "^2.4.0",
