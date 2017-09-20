@@ -209,4 +209,15 @@ router.delete('/delete/:id', (req,res,next) => {
     });
 });
 
+router.delete('/deleteByQuery', (req, res, next) => {
+    let query = {};
+    console.log(req.body)
+    query = req.body;
+    if(query !== {}) {
+        Test.collection.remove(query, (error, test) => {
+            httpUtil.handleResponseCallback(res, error, test);
+        });
+    }
+});
+
 module.exports = router;
