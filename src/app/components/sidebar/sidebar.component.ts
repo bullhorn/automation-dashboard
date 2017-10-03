@@ -1,12 +1,13 @@
+// NG2
 import { Component, EventEmitter, Input, OnInit, Output, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+// Vendor
 import { FormUtils, SelectControl, NovoModalService, TextBoxControl } from 'novo-elements';
-
+// APP
 import { TestService } from '../../services/test/test.service';
 import { TeamService } from '../../services/team/team.service';
 import { ResultService } from '../../services/result/result.service';
 import { ProjectService } from '../../services/project/project.service';
-
 import { PreferencesComponent } from '../preferences/preferences.component';
 import { TeamPageComponent } from '../team-page/team-page.component';
 
@@ -27,11 +28,10 @@ export class SidebarComponent implements OnInit {
   toggleTitle: string = "View Totals";
 
   constructor(private testService: TestService, private teamService: TeamService, private resultService: ResultService,
-              private projectService: ProjectService, private formUtils: FormUtils, private modalService: NovoModalService,
+              private projectService: ProjectService, private formUtils: FormUtils, public modalService: NovoModalService,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('initSidebar');
     this.initOptions().then(res => {
       this.controls = this.initControls(res.teamOptions, res.resultOptions, res.projectOptions);
       this.sidebarForm = this.formUtils.toFormGroup(this.controls);

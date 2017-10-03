@@ -1,5 +1,6 @@
 // NG2
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
+// APP
 import { TestService } from '../../services/test/test.service';
 
 @Component({
