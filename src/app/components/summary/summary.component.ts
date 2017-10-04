@@ -1,6 +1,5 @@
 // NG2
 import { Component, OnInit, Input } from '@angular/core';
-import { TeamService } from '../../services/team/team.service';
 
 @Component({
   selector: 'app-summary',
@@ -10,7 +9,7 @@ import { TeamService } from '../../services/team/team.service';
 export class SummaryComponent implements OnInit {
   tableFilter: any = {};
 
-  constructor(private teamService: TeamService) { }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -18,12 +17,4 @@ export class SummaryComponent implements OnInit {
   onSidebarFilter(filter) {
     this.tableFilter = filter;
   }
-
-  slackReport(team) {
-    console.log(team);
-    this.teamService.sendSlackReport(team).subscribe(res => {
-      console.log(res);
-    });
-  }
-
 }
