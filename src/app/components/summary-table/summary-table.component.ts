@@ -79,8 +79,13 @@ export class SummaryTableComponent implements OnInit, OnChanges {
     const table = this.tableData;
     let total = 0;
     table.forEach(res => {
-      res['numTests'] = resultData[res.result];
-      total += resultData[res.result];
+      res.numTests = resultData[res.result];
+      if (resultData[res.result]) {
+        total += resultData[res.result];
+      } else {
+        res.numTests = 0;
+        resultData[res.result] = 0;
+      }
     });
     table.forEach(res => {
       res['percentage'] = `${((resultData[res.result] / total) * 100).toFixed(2)}%`;
