@@ -1,6 +1,6 @@
 #sidebar {
     position: fixed;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     height: 100%;
     width: 300px;
@@ -37,7 +37,6 @@
         font-size: 1.6em;
         line-height: 175%;
         background-color: rgba(0, 0, 0, 0.15);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         i {
             font-size: 1.2em;
             color: #FF6600;

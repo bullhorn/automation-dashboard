@@ -4,6 +4,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormUtils, TextAreaControl, SelectControl, NovoModalService } from 'novo-elements';
 // App
 import { TestService } from '../../services/test/test.service';
+import { TeamService } from '../../services/team/team.service';
 import { PreferencesComponent } from '../preferences/preferences.component';
 
 @Component({
@@ -18,7 +19,7 @@ export class SummarySidebarComponent implements OnInit {
   summarySidebarForm: any;
   teamOptions: any;
 
-  constructor(private testService: TestService, private formUtils: FormUtils, private modalService: NovoModalService) { }
+  constructor(private testService: TestService, private formUtils: FormUtils, private modalService: NovoModalService, private teamService: TeamService) { }
 
   ngOnInit() {
     this.initOptions();
@@ -74,5 +75,10 @@ export class SummarySidebarComponent implements OnInit {
         value: 'TBD'
       }
     ];
+  }
+
+  slackReport(team) {
+    this.teamService.sendSlackReport(team).subscribe(res => {
+    });
   }
 }
