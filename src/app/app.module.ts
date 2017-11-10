@@ -12,6 +12,7 @@ import { ListComponent } from './components/list/list.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { PreferencesComponent } from './components/preferences/preferences.component';
 import { SummarySidebarComponent } from './components/summary-sidebar/summary-sidebar.component';
+import { TestHistoryComponent } from './components/list/test-history/test-history.component';
 
 // Services
 import { TestService } from './services/test/test.service';
@@ -40,7 +41,8 @@ import { TotalsComponent } from './components/totals/totals.component';
     SummarySidebarComponent,
     TeamPageComponent,
     SummaryTableComponent,
-    TotalsComponent
+    TotalsComponent,
+    TestHistoryComponent
   ],
   imports: [
     BrowserModule,

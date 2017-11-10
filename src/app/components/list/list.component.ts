@@ -1,6 +1,8 @@
 // NG2
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { TestService } from '../../services/test/test.service';
+import { NovoModalService } from 'novo-elements';
+import { TestHistoryComponent } from './test-history/test-history.component';
 
 @Component({
   selector: 'app-list',
@@ -12,7 +14,7 @@ export class ListComponent implements OnInit, OnChanges {
   tests: any;
   isLoading: Boolean = true;
 
-  constructor(private testService: TestService) { }
+  constructor(private testService: TestService, private modalService: NovoModalService) { }
 
   ngOnInit() {
     this.testService.query(this.filter, true, 'name', 100, {name: 1}, {pastResults: 0}).subscribe(res => {
@@ -44,6 +46,14 @@ export class ListComponent implements OnInit, OnChanges {
   markAsFailed(test) {
     this.testService.update(test._id, {result: 'Failed'}).subscribe(res => {
       this.ngOnChanges();
+    });
+  }
+
+  public viewHistory(test): void {
+    console.log(this.filter);
+    this.testService.getTestData(test._id).subscribe((data) => {
+      console.log(data);
+      this.modalService.open(TestHistoryComponent, test.id);
     });
   }
 
