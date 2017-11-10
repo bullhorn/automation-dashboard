@@ -50,10 +50,12 @@ export class ListComponent implements OnInit, OnChanges {
   }
 
   public viewHistory(test): void {
-    console.log(this.filter);
-    this.testService.getTestData(test._id).subscribe((data) => {
-      console.log(data);
-      this.modalService.open(TestHistoryComponent, test.id);
+    this.testService.getTestData(test._id).subscribe((res) => {
+      const data = {
+        title: res.data[0].name,
+        data: res.data[0].pastResults
+      }
+      this.modalService.open(TestHistoryComponent, data);
     });
   }
 

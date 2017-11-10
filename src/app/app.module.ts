@@ -74,7 +74,7 @@ import { TotalsComponent } from './components/totals/totals.component';
       }
     ])
   ],
-  entryComponents: [PreferencesComponent],
+  entryComponents: [PreferencesComponent, TestHistoryComponent],
   providers: [
     TestService,
     TeamService,
