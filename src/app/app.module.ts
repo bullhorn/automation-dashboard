@@ -23,7 +23,7 @@ import {
     NovoModalModule, NovoModalRef, FormUtils, NovoFormModule, NovoLabelService,
     NovoToastService, ComponentUtils, NovoModalService, NovoHeaderModule, NovoButtonModule,
     NovoSelectModule, NovoFormExtrasModule, NovoElementsModule, NovoTableModule, NovoTableExtrasModule,
-    NovoLoadingModule } from 'novo-elements';
+    NovoLoadingModule, NovoElementProviders } from 'novo-elements';
 
 import { TeamPageComponent } from './components/team-page/team-page.component';
 import { SummaryTableComponent } from './components/summary-table/summary-table.component';
@@ -56,6 +56,7 @@ import { TotalsComponent } from './components/totals/totals.component';
     NovoLoadingModule,
     NovoTableModule,
     NovoTableExtrasModule,
+    NovoElementProviders.forRoot(),
     RouterModule.forRoot([
       {
         path: '',
