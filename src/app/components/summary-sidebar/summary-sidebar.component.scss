@@ -1,15 +1,12 @@
 .summary-sidebar {
     position: fixed;
     height: 100%;
-    width: 275px;
-    background-color: #1f2434;
+    width: 300px;
+    background-color: #1B2127;
     padding: 0 2em 0 0;
     novo-select div[type="button"] {
         color: white;
         border-bottom: 1px solid #f4f4f4;
-    }
-    #testFilter, #suiteFilter {
-        color: #f4f4f4;
     }
     button {
         margin: 1em 0 .5em 5%;
@@ -30,21 +27,25 @@
         }
     }
     #title-section {
+        text-align: center;
         color: white;
-        padding: .5em 1em .75em 1.5em;
-        background-color: #1d2130;
-        width: 275px;
-        margin-bottom: 1em;
+        padding: 1em 1em 1.25em 0;
+        width: 300px;
+        margin-bottom: 1.25em;
         font-family: "Roboto", sans-serif;
         text-transform: uppercase;
-        font-weight: 400;
         letter-spacing: 0.75px;
-        font-size: 1.5em;
-        line-height: 200%;
-        border-bottom: 1px solid rgb(235, 104, 69);
+        font-size: 1.6em;
+        line-height: 175%;
+        background-color: rgba(0, 0, 0, 0.15);
         i {
-            font-size: 1.25em;
-            color: rgb(235, 104, 69);
+            font-size: 1.2em;
+            color: #FF6600;
+        }
+        span {
+            font-size: 22px;
+            color: white;
+            margin-left: 20px;
         }
     }
 }
