@@ -1,7 +1,7 @@
 // NG2
 import { Component, OnInit } from '@angular/core';
 // Vendor
-import { SelectControl, NovoModalService, NovoModalRef, FormValidators, NovoToastService, FormUtils } from 'novo-elements';
+import { SelectControl, PickerControl, NovoModalService, NovoModalRef, FormValidators, NovoToastService, FormUtils } from 'novo-elements';
 
 import { TeamService } from '../../services/team/team.service';
 import { ProjectService } from '../../services/project/project.service';
@@ -34,23 +34,31 @@ export class PreferencesComponent implements OnInit {
   setupForm() {
     const promises = [this.teamService.getOptions(), this.resultService.getOptions(), this.projectService.getOptions()];
     Promise.all(promises).then(options => {
-      this.teamControl = new SelectControl({
+      this.teamControl = new PickerControl({
           key: 'team',
           label: 'Team',
+          readOnly: false,
+          multiple: false,
           value: this.data.team,
-          options: options[0].data
+          config: {
+            options: options[0].data,
+          }
       });
-      this.resultControl = new SelectControl({
+      this.resultControl = new PickerControl({
           key: 'result',
           label: 'Result',
           value: this.data.result,
-          options: options[1].data
+          config: {
+            options: options[1].data
+          }
       });
-      this.projectControl = new SelectControl({
+      this.projectControl = new PickerControl({
           key: 'project',
           label: 'Project',
           value: this.data.project,
-          options: options[2].data
+          config: {
+            options: options[2].data
+          }
       });
       this.form = this.formUtils.toFormGroup([this.teamControl, this.resultControl, this.projectControl]);
     });

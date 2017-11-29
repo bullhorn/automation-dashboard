@@ -1,6 +1,8 @@
 app-preferences {
     min-width: 450px;
     #form-section {
-        padding-top: 70px;
+        min-height: 100%;
+        padding-top: 50px;
+        padding-bottom: 40px;
     }
 }

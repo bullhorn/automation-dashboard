@@ -1,5 +1,9 @@
 <novo-modal>
-    <header title="Default View" theme="navigation" icon="compass"></header>
+    <header title="Default View" theme="navigation" icon="compass">
+        <utils>
+            <util-action icon="times" (click)="close()"></util-action>
+        </utils>
+    </header>
     <section id="form-section">
       <novo-form *ngIf="form" [form]="form">
         <div class="novo-form-row">
@@ -7,6 +11,9 @@
         </div>
         <div class="novo-form-row">
             <novo-control [form]="form" [control]="resultControl"></novo-control>
+        </div>
+        <div class="novo-form-row">
+            <novo-control [form]="form" [control]="projectControl"></novo-control>
         </div>
       </novo-form>
     </section>

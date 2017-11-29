@@ -9,10 +9,11 @@
     </novo-form>
     <button theme="dialogue" icon="convert" inverse (click)="handleSidebarTotals()">{{ toggleTitle }}</button>
     <div *ngIf="!showTotals">
-        <a href="/summary"><button theme="dialogue" icon="chart-bar" inverse>Test Summary</button></a>
-        <button theme="dialogue" icon="tools" inverse (click)="openTeams()">Team Config</button>
+        <!-- <a href="/summary"><button theme="dialogue" icon="chart-bar" inverse>Test Summary</button></a> -->
         <button theme="dialogue" icon="compass" inverse (click)="openPreferences()">Default View</button>
-        <button theme="dialogue" icon="republish" inverse (click)="refreshList()">Refresh List</button>
+        <button theme="dialogue" icon="tools" inverse (click)="openTeams()">Team Config</button>
+        <button theme="dialogue" icon="send" inverse (click)="refreshList()">Send Slack Report</button>
+        <button theme="dialogue" icon="filter" inverse (click)="refreshList()">Clear Filters</button>
     </div>
     <app-totals *ngIf="showTotals" [data]="sidebarTotals"></app-totals>
 </section>

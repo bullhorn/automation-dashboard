@@ -1,5 +1,9 @@
 <novo-modal>
-    <header title="Team Config" theme="navigation" icon="tools"></header>
+    <header title="Team Config" theme="navigation" icon="tools">
+        <utils>
+            <util-action icon="times" (click)="close()"></util-action>
+        </utils>
+    </header>
     <section id="form-section">
         <novo-form *ngIf="dropdownForm" layout="horizontal" [form]="dropdownForm">
             <div class="novo-form-row">

@@ -61,8 +61,8 @@ syncTeam: Boolean;
       }));
       this.controls.push(new TilesControl({
         key: 'syncTeam',
-        value: false,
-        options: [{ value: false, label: 'No' }, { value: true, label: 'Yes' }],
+        value: true,
+        options: [{ value: true, label: 'Yes' }, { value: false, label: 'No' }],
         label: 'Sync Team Data'
       }));
       this.form = this.formUtils.toFormGroup(this.controls);
