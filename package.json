@@ -48,7 +48,7 @@
     "novo-elements": "^2.1.52",
     "request-promise": "^4.2.1",
     "rxjs": "^5.1.0",
-    "slack-node": "^0.1.8",
+    "slack-node": "^0.2.0",
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
